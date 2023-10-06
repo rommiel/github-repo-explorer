@@ -46,7 +46,7 @@ const UserCard = ({ user }) => {
         data-bs-parent="#accordionExample"
       >
         <div className="accordion-body">
-          {repos ? (
+          {repos && repos.length > 0 ? (
             repos.map((repo) => {
               return <RepoCard repo={repo} key={repo.id} />;
             })

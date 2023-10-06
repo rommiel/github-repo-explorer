@@ -45,7 +45,7 @@ const Search = () => {
         </div>
       ) : (
         <div className="search-results">
-          {users ? (
+          {users && users.length > 0 ? (
             users.map((user) => {
               return (
                 <div
