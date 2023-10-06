@@ -1,0 +1,19 @@
+.user-card {
+  .accordion-button {
+    color: #212529;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .accordion-button:not(.collapsed) {
+    background-color: #fff;
+    box-shadow: none;
+  }
+
+  .accordion-button:focus {
+    box-shadow: none;
+  }
+
+  .accordion-body {
+    background-color: #f1eeee;
+  }
+}

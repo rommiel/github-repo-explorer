@@ -1,0 +1,30 @@
+.repo-card-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  padding: 10px;
+  border-bottom: 1px solid #d2d4d6;
+
+  .repo-name {
+    text-decoration: none;
+    color: #2f81f7;
+    font-weight: 600;
+  }
+
+  .repo-name:hover {
+    text-decoration: underline;
+  }
+
+  .fa-star {
+    margin-right: 5px;
+  }
+
+  .additional-details {
+    display: block;
+    font-size: 12px;
+  }
+
+  .repo-details {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,51 @@
+.main-container {
+  max-width: 600px;
+  margin: 20px auto;
+  border: 1px solid #d3d3d3;
+  background-color: #d3d3d3;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.git-logo {
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+}
+
+h4 {
+  text-align: left;
+  display: inline-block;
+  margin-bottom: 0 !important;
+}
+
+.search-main {
+  display: flex;
+  align-items: center;
+
+  .form-control {
+    height: 40px;
+  }
+}
+
+.form-group {
+  text-align: center;
+}
+
+.search-btn {
+  margin: 20px auto;
+}
+
+.loader {
+  color: #565656;
+}
+
+.accordion {
+  margin-top: 5px;
+}
