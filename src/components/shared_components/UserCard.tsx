@@ -19,7 +19,6 @@ const UserCard = ({ user }) => {
 
     fetchUserRepo(user.login)
       .then((res) => {
-        console.log({ res });
         setRepos(res);
       })
       .catch((err) => {
@@ -47,7 +46,7 @@ const UserCard = ({ user }) => {
         data-bs-parent="#accordionExample"
       >
         <div className="accordion-body">
-          {repos.length > 0 ? (
+          {repos ? (
             repos.map((repo) => {
               return <RepoCard repo={repo} key={repo.id} />;
             })

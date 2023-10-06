@@ -7,41 +7,6 @@
   padding: 30px;
 }
 
-.header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.git-logo {
-  height: 50px;
-  width: 50px;
-  display: inline-block;
-}
-
-h4 {
-  text-align: left;
-  display: inline-block;
-  margin-bottom: 0 !important;
-}
-
-.search-main {
-  display: flex;
-  align-items: center;
-
-  .form-control {
-    height: 40px;
-  }
-}
-
-.form-group {
-  text-align: center;
-}
-
-.search-btn {
-  margin: 20px auto;
-}
-
 .loader {
   color: #565656;
 }
