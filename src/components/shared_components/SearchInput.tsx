@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import "./SearchInput.css";
 import { createSearchParams, useNavigate } from "react-router-dom";
+import SearchInputProps from "../models/SearchInputProps";
 
-const SearchInput = ({ q }) => {
-  const [query, setQuery] = useState(q);
+const SearchInput = ({ q }: SearchInputProps) => {
+  const [query, setQuery] = useState(q || "");
   const navigate = useNavigate();
 
   const handleSearch = async (e) => {
@@ -12,9 +13,13 @@ const SearchInput = ({ q }) => {
     if (query) {
       navigate({
         pathname: "/search",
-        search: `?${createSearchParams({ q: query })}`,
+        search: `?${buildParams(query)}`,
       });
     }
+  };
+
+  const buildParams = (q: string): URLSearchParams => {
+    return createSearchParams({ q: q });
   };
 
   return (

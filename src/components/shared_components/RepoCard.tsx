@@ -1,7 +1,8 @@
 import React from "react";
 import "./RepoCard.css";
+import RepoCardProps from "../models/RepoCardProps";
 
-const RepoCard = ({ repo }) => {
+const RepoCard = ({ repo }: RepoCardProps) => {
   return (
     <div className="repo-card-container">
       <div className="top-part">

@@ -3,11 +3,12 @@ import { useSearchParams } from "react-router-dom";
 import Title from "../../shared_components/Title.tsx";
 import SearchInput from "../../shared_components/SearchInput.tsx";
 import UserCard from "../../shared_components/UserCard.tsx";
-import axios from "../../services/axios.js";
+import axiosService from "../../services/axios.js";
+import UserModel from "../../models/UserModel.ts";
 
 const Search = () => {
-  const [loading, setLoading] = useState(true);
-  const [users, setUsers] = useState([]);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [users, setUsers] = useState<UserModel[]>([]);
   const [searchParams] = useSearchParams();
   const query = searchParams.get("q");
 
@@ -15,7 +16,7 @@ const Search = () => {
     setLoading(true);
     const fetchUsers = async () => {
       try {
-        const { data } = await axios.get(`/search/users?q=${query}`);
+        const { data } = await axiosService.get(`/search/users?q=${query}`);
         return data?.items;
       } catch (err) {
         console.log(err);
@@ -51,7 +52,7 @@ const Search = () => {
                 <div
                   className="accordion accordion-flush"
                   id="accordionExample"
-                  key={user.id}
+                  key={user.id.toString()}
                 >
                   <UserCard user={user} />
                 </div>
