@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const axiosURL = axios.create({
+const axiosService = axios.create({
   baseURL: "https://api.github.com",
 });
 
-export default axiosURL;
+export default axiosService;
