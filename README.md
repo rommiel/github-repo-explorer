@@ -8,3 +8,7 @@ A basic personal project that user can search for a github user and display thei
 ## Development server
 
 Run `npm start` for a dev server. Navigate to `http://localhost:3000/`.
+
+## Future plan
+
+1. Pagination of search
